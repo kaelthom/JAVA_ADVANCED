@@ -15,6 +15,10 @@ public class Parking {
         this.vehicles = new ArrayList<>();
     }
 
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
     public void add(Vehicle vehicle) {
         this.vehicles.add(vehicle);
     }
