@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Parking {
+public class Parking<T extends Vehicle> {
+    List<T> vehicles;
     private String code;
     private String name;
-    List<Vehicle> vehicles;
 
     public Parking(String code, String name) {
         this.code = code;
@@ -15,11 +15,11 @@ public class Parking {
         this.vehicles = new ArrayList<>();
     }
 
-    public List<Vehicle> getVehicles() {
+    public List<T> getVehicles() {
         return vehicles;
     }
 
-    public void add(Vehicle vehicle) {
+    public void add(T vehicle) {
         this.vehicles.add(vehicle);
     }
 
