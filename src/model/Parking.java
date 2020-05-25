@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class Parking<T extends Vehicle> {
+    private final int capacity = 15;
     List<T> vehicles;
     private String code;
     private String name;
