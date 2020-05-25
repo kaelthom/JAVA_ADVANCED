@@ -2,7 +2,7 @@ package model;
 
 public class Application {
     public static void main(String[] args) {
-        Parking newParking = new Parking("A3", "Standard");
+        Parking<Vehicle> newParking = new Parking<>("A3", "Standard");
         newParking.add(new RegisteredCar("Peugeot"));
         newParking.add(new UnregisteredCar("Astra"));
         newParking.add(new UnregisteredTruck("Renault"));
