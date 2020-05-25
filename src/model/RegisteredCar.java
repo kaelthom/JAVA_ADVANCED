@@ -5,10 +5,4 @@ public final class RegisteredCar extends Car{
         super(brand);
     }
 
-    @Override
-    public String toString() {
-        return "RegisteredCar " + brand +" with id : " + id;
-    }
-
-
 }

@@ -6,9 +6,4 @@ public final class RegisteredTruck extends Truck{
         super(brand);
     }
 
-    @Override
-    public String toString() {
-        return "registeredTruck " + brand +" with id : " + id;
-    }
-
 }

@@ -25,10 +25,10 @@ public class Application {
 
         Parking newParking = new Parking("A3", "Standard");
         newParking.add(new RegisteredCar("Peugeot"));
-        newParking.add(new UnregisteredCar("Peugeot"));
-        newParking.add(new UnregisteredTruck("Peugeot"));
-        newParking.add(new RegisteredTruck("Peugeot"));
-        newParking.add(new UnregisteredTruck("Peugeot"));
+        newParking.add(new UnregisteredCar("Astra"));
+        newParking.add(new UnregisteredTruck("Renault"));
+        newParking.add(new RegisteredTruck("Ford"));
+        newParking.add(new UnregisteredTruck("Subaru"));
 
         System.out.println(newParking.getVehicles().size() + " vehicles, unregistered total cost is " + newParking.calculateTotalPrice());
     }

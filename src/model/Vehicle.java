@@ -8,7 +8,7 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle " + brand +" with id : " + id;
+        return this.getClass().getSimpleName() + " " + brand +" with id : " + id;
     }
 
     public Vehicle(String brand) {
@@ -19,7 +19,4 @@ public abstract class Vehicle {
 
     }
 
-    public static int getCount() {
-        return count;
-    }
 }

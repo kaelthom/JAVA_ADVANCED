@@ -7,11 +7,6 @@ public final class UnregisteredTruck extends Truck implements TollGatePayable {
     }
 
     @Override
-    public String toString() {
-        return "UnregisteredTruck " + brand +" with id : " + id;
-    }
-
-    @Override
     public int payTollGate() {
         return 5;
     }

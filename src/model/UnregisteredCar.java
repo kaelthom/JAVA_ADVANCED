@@ -6,11 +6,6 @@ public final class UnregisteredCar extends Car implements TollGatePayable{
     }
 
     @Override
-    public String toString() {
-        return "UnregisteredCar " + brand +" with id : " + id;
-    }
-
-    @Override
     public int payTollGate() {
         return 3;
     }
