@@ -8,17 +8,18 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                '}';
+        return "Vehicle " + brand +" with id : " + id;
     }
 
     public Vehicle(String brand) {
         this.id = count;
         this.brand = brand;
-        System.out.println("Car " + brand +" with id : " + count);
+        System.out.println(this);
         count++;
 
+    }
+
+    public static int getCount() {
+        return count;
     }
 }

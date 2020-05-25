@@ -30,6 +30,6 @@ public class Application {
         newParking.add(new RegisteredTruck("Peugeot"));
         newParking.add(new UnregisteredTruck("Peugeot"));
 
-        System.out.println("total price : " + newParking.calculateTotalPrice());
+        System.out.println(Vehicle.getCount() + " vehicles, unregistered total cost is " + newParking.calculateTotalPrice());
     }
 }
