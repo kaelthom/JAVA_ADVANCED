@@ -14,5 +14,10 @@ public class Application {
         newCarParking.add(new RegisteredCar("Peugeot"));
         newCarParking.add(new UnregisteredCar("Astra"));
         System.out.println(newCarParking.getVehicles().size() + " vehicles, unregistered total cost is " + newCarParking.calculateTotalPrice());
+
+        Parking<Truck> newTruckParking = new Parking<>("A3", "Only Truck");
+        newTruckParking.add(new RegisteredTruck("Peugeot"));
+        newTruckParking.add(new UnregisteredTruck("Astra"));
+        System.out.println(newTruckParking.getVehicles().size() + " vehicles, unregistered total cost is " + newTruckParking.calculateTotalPrice());
     }
 }
