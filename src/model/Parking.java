@@ -1,13 +1,12 @@
 package model;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Parking<T extends Vehicle> implements Comparable<Parking> {
-    private final static int capacity = 15;
+    private final static int capacity = 5;
     private HashSet<T> vehicles;
+    private Queue<T> waitingVehicles;
     private HashSet<TollGate> tollGates;
     private String code;
     private String name;
@@ -17,6 +16,7 @@ public class Parking<T extends Vehicle> implements Comparable<Parking> {
         this.name = name;
         this.vehicles = new HashSet<>();
         this.tollGates = new HashSet<>();
+        this.waitingVehicles = new LinkedList<>();
 
         tollGates.add(new TollGate(Direction.IN, Orientation.NORTH));
         tollGates.add(new TollGate(Direction.OUT, Orientation.SOUTH));
@@ -39,8 +39,39 @@ public class Parking<T extends Vehicle> implements Comparable<Parking> {
         return sb.toString();
     }
 
-    public void add(T vehicle) {
+    public void park(T vehicle) {
+        System.out.println("let's park " + vehicle);
         this.vehicles.add(vehicle);
+    }
+
+    public void exit(T vehicle) {
+        if (vehicle == null) return;
+        this.vehicles.remove(vehicle);
+        System.out.println(vehicle.toString() + " is leaving");
+        if (!waitingVehicles.isEmpty()) {
+            T waitingVehicle = waitingVehicles.poll();
+            park(waitingVehicle);
+        }
+        System.out.println("Waiting amount : " + waitingVehicles.size());
+        System.out.println("Parking contenance : " + (capacity - vehicles.size()));
+    }
+
+    public void add(T vehicle) {
+
+        System.out.println(vehicle.toString() + " entering parking...");
+        if (this.vehicles.size() < capacity) {
+            this.park(vehicle);
+            System.out.println("Parking contenance : " + (capacity - vehicles.size()));
+        } else {
+            System.out.println(vehicle.toString() + " too many vehicles in it, putting to waiting queue");
+            this.waitingVehicles.add(vehicle);
+        }
+        System.out.println("Waiting amount : " + waitingVehicles.size());
+    }
+
+    public void addAll(Set<T> vehicles) {
+        this.waitingVehicles.addAll(vehicles);
+        this.vehicles.addAll(vehicles);
     }
 
     public int calculateTotalPrice() {

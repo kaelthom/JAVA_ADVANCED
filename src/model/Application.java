@@ -45,15 +45,28 @@ public class Application {
         }
         System.out.println("Sorting using Comparator");
         List<Parking<? extends Vehicle>> sortedByTotalPrice = new ArrayList<>(parkings);
-        Collections.sort(sortedByTotalPrice, new Comparator<Parking<? extends Vehicle>>() {
-            @Override
-            public int compare(Parking<? extends Vehicle> o1, Parking<? extends Vehicle> o2) {
-                return Integer.compare(o1.calculateTotalPrice(), o2.calculateTotalPrice());
-            }
-        });
+        sortedByTotalPrice.sort(Comparator.comparingInt(Parking::calculateTotalPrice));
         for (Parking<? extends Vehicle> parking : sortedByTotalPrice) {
             System.out.println(parking.getName() + " - " + parking.calculateTotalPrice());
         }
 
+        newParking.add(new RegisteredCar(PEUGEOT, "ONE_MORE_THAN_CAPACITY"));
+        Vehicle exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+        exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+        exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+        exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+        exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+        exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+        exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        newParking.exit(exitVehicle);
+
+
+        newParking.add(new RegisteredCar(PEUGEOT, "ANOTHER_CAR"));
     }
 }
