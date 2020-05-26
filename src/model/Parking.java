@@ -59,7 +59,7 @@ public class Parking<T extends Vehicle> {
     }
 
     public class TollGate {
-        private int id;
+        private String id;
         private boolean enable;
         private Direction direction;
         private Orientation orientation;
@@ -70,12 +70,12 @@ public class Parking<T extends Vehicle> {
             this.direction = direction;
             this.orientation = orientation;
             this.parking = Parking.this;
-            this.id = this.parking.tollGates.size();
+            this.id = this.parking.code + "#door-" + parking.tollGates.size();
         }
 
         @Override
         public String toString() {
-            return this.parking.code + "#door-" + id;
+            return this.id;
         }
 
     }
