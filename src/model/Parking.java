@@ -1,27 +1,32 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 import java.util.stream.IntStream;
 
-public class Parking<T extends Vehicle> {
+public class Parking<T extends Vehicle> implements Comparable<Parking> {
     private final static int capacity = 15;
-    private List<T> vehicles;
-    private List<TollGate> tollGates;
+    private HashSet<T> vehicles;
+    private HashSet<TollGate> tollGates;
     private String code;
     private String name;
 
     public Parking(String code, String name) {
         this.code = code;
         this.name = name;
-        this.vehicles = new ArrayList<>();
-        this.tollGates = new ArrayList<>();
+        this.vehicles = new HashSet<>();
+        this.tollGates = new HashSet<>();
 
         tollGates.add(new TollGate(Direction.IN, Orientation.NORTH));
         tollGates.add(new TollGate(Direction.OUT, Orientation.SOUTH));
     }
 
-    public List<T> getVehicles() {
+    public String getName() {
+        return name;
+    }
+
+    public Set<T> getVehicles() {
         return vehicles;
     }
 
@@ -43,6 +48,31 @@ public class Parking<T extends Vehicle> {
                 .filter(vehicle -> vehicle instanceof TollGatePayable)
                 .flatMapToInt(vehicle -> IntStream.of(((TollGatePayable) vehicle).payTollGate()))
                 .sum();
+    }
+
+    @Override
+    public int compareTo(Parking o) {
+        return Integer.compare(this.getVehicles().size(), o.getVehicles().size());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Parking)) return false;
+        Parking<?> parking = (Parking<?>) o;
+        return name.equals(parking.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return "Parking{" +
+                "code='" + code + '\'' +
+                '}';
     }
 
     public enum Direction {

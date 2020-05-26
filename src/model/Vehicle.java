@@ -1,22 +1,38 @@
 package model;
 
+import java.util.Objects;
+
 public abstract class Vehicle {
-    private static int count = 0;
-    public final int id;
-    public String brand;
     private static final int gaz = 100;
+    private static int count = 0;
+    private final int id;
+    private String brand;
+    private String plate;
 
-    @Override
-    public String toString() {
-        return this.getClass().getSimpleName() + " " + brand +" with id : " + id;
-    }
-
-    public Vehicle(String brand) {
+    public Vehicle(String brand, String plate) {
         this.id = count;
         this.brand = brand;
+        this.plate = plate;
         System.out.println(this);
         count++;
 
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + " " + brand + " with id : " + id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vehicle)) return false;
+        Vehicle vehicle = (Vehicle) o;
+        return plate.equals(vehicle.plate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(plate);
+    }
 }
