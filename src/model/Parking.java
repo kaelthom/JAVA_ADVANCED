@@ -70,8 +70,7 @@ public class Parking<T extends Vehicle> implements Comparable<Parking> {
     }
 
     public void addAll(Set<T> vehicles) {
-        this.waitingVehicles.addAll(vehicles);
-        this.vehicles.addAll(vehicles);
+        vehicles.forEach(this::add);
     }
 
     public int calculateTotalPrice() {
