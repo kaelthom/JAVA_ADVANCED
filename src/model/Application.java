@@ -68,5 +68,21 @@ public class Application {
 
 
         newParking.add(new RegisteredCar(PEUGEOT, "ANOTHER_CAR"));
+
+        Map<String, List<Parking<? extends Vehicle>>> departments = new HashMap<>();
+        departments.putIfAbsent("Gironde", parkings);
+        departments.putIfAbsent("Loire", parkings);
+
+        Iterator<String> departKeysIt = departments.keySet().iterator();
+        departKeysIt.forEachRemaining(
+                key -> System.out.println(key + " - " + parkings)
+        );
+
+        VehicleFactory vehicleFactory = new VehicleFactory();
+        vehicleFactory.createVehicle(VehicleFactory.VehicleType.REGISTERED_CAR, "Tata", "F0001");
+        vehicleFactory.createVehicle(VehicleFactory.VehicleType.UNREGISTERED_CAR, "Tata", "F0002");
+        vehicleFactory.createVehicle(VehicleFactory.VehicleType.REGISTERED_TRUCK, "Tata", "F0003");
+        vehicleFactory.createVehicle(VehicleFactory.VehicleType.UNREGISTERED_TRUCK, "Tata", "F0004");
+
     }
 }

@@ -58,7 +58,7 @@ public class Parking<T extends Vehicle> implements Comparable<Parking> {
 
     public void add(T vehicle) {
 
-        System.out.println(vehicle.toString() + " entering parking...");
+        System.out.println(vehicle.toString() + " entering parking " + this.name + "...");
         if (this.vehicles.size() < capacity) {
             this.park(vehicle);
             System.out.println("Parking contenance : " + (capacity - vehicles.size()));

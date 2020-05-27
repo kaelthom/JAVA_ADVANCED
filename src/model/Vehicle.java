@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements IVehicle {
     private static final int gaz = 100;
     private static int count = 0;
     private final int id;

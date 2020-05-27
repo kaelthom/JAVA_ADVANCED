@@ -5,4 +5,8 @@ public final class RegisteredCar extends Car {
         super(brand, plate);
     }
 
+    public static Vehicle createVehicle(String brand, String plate) {
+        return new RegisteredCar(brand, plate);
+    }
+
 }
