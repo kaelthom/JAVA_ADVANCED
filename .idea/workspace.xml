@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c7b8925-71c7-4fc3-a833-635e1d20c193" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Application.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,7 +19,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="369">
               <caret line="95" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
@@ -289,12 +288,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590393440154</updated>
       <workItem from="1590393443647" duration="28743000" />
-      <workItem from="1590493674580" duration="12482000" />
+      <workItem from="1590493674580" duration="12632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41225000" />
+    <option name="totallyTimeSpent" value="41375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -640,7 +639,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="369">
           <caret line="95" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>

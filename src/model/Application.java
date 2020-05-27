@@ -93,7 +93,7 @@ public class Application {
         if (avf2 != null) {
             avf2.createRegisteredVehicle("Titi", "RTRUCK");
             avf2.createUnregisteredVehicle("Titi", "UTRUCK");
-git commit -am        }
+        }
 
     }
 }
