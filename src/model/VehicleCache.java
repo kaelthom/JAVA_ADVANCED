@@ -7,7 +7,7 @@ import java.util.List;
 public class VehicleCache {
     private static AbstractVehicleFactory carFactory = AbstractVehicleFactory.getVehicleFactory(AbstractVehicleFactory.AbstractVehicleType.CAR);
     private static AbstractVehicleFactory truckFactory = AbstractVehicleFactory.getVehicleFactory(AbstractVehicleFactory.AbstractVehicleType.TRUCK);
-    private static List<Vehicle> databaseVehicles = new ArrayList<>(
+    public static List<Vehicle> databaseVehicles = new ArrayList<>(
             Arrays.asList(
                     carFactory.createRegisteredVehicle("Car", "001"),
                     truckFactory.createRegisteredVehicle("Truck", "002")));
