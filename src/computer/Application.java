@@ -20,5 +20,17 @@ public class Application {
         cp4.print(HELLO);
         cp5.print(HELLO);
         cp6.print(HELLO);
+
+        DetailedComputerBuilder builder = new DetailedComputerBuilder("AMD X354", 4, 2.5f);
+        DetailedComputer comp1 = builder
+                .setOnline()
+                .isLaptop()
+                .withGraphicCard("NVidia")
+                .build();
+        System.out.println(comp1);
+        DetailedComputerBuilder builder2 = new DetailedComputerBuilder("AMD X412", 8, 2.9f);
+        DetailedComputer comp2 = builder2
+                .build();
+        System.out.println(comp2);
     }
 }
