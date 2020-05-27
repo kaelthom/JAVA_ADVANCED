@@ -11,7 +11,7 @@ public class PrinterCentralizer {
     private List<Printer> printers;
     private int lastId = 0;
 
-    public PrinterCentralizer(List<Printer> printers) {
+    private PrinterCentralizer(List<Printer> printers) {
         this.printers = printers;
     }
 
