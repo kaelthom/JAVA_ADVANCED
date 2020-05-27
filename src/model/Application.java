@@ -85,11 +85,15 @@ public class Application {
         vehicleFactory.createVehicle(VehicleFactory.VehicleType.UNREGISTERED_TRUCK, "Tata", "F0004");
 
         AbstractVehicleFactory avf1 = AbstractVehicleFactory.getVehicleFactory(AbstractVehicleFactory.AbstractVehicleType.CAR);
-        avf1.createRegisteredVehicle("Titi", "RCAR");
-        avf1.createUnregisteredVehicle("Titi", "UCAR");
+        if (avf1 != null) {
+            avf1.createRegisteredVehicle("Titi", "RCAR");
+            avf1.createUnregisteredVehicle("Titi", "UCAR");
+        }
         AbstractVehicleFactory avf2 = AbstractVehicleFactory.getVehicleFactory(AbstractVehicleFactory.AbstractVehicleType.TRUCK);
-        avf2.createRegisteredVehicle("Titi", "RTRUCK");
-        avf2.createUnregisteredVehicle("Titi", "UTRUCK");
+        if (avf2 != null) {
+            avf2.createRegisteredVehicle("Titi", "RTRUCK");
+            avf2.createUnregisteredVehicle("Titi", "UTRUCK");
+git commit -am        }
 
     }
 }
