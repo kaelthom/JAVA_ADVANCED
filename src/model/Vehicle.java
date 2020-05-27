@@ -20,7 +20,7 @@ public abstract class Vehicle implements Cloneable {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + " " + brand + " with id : " + id;
+        return this.getClass().getSimpleName() + " " + brand + " " + plate + " with id : " + id;
     }
 
     @Override

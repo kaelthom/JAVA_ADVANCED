@@ -14,9 +14,11 @@ public class VehicleCache {
     private static List<Vehicle> vehicles = new ArrayList<>();
 
     public static void loadCache() {
+        System.out.println("Loading data from DB..");
         for (Vehicle vehicle : databaseVehicles) {
             vehicles.add(vehicle.clone());
         }
+        System.out.println(vehicles);
     }
 
     public static Vehicle getVehicle(String plate) {
