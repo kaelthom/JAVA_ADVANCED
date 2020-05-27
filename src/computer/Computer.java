@@ -10,7 +10,15 @@ public class Computer {
         this.id = count++;
     }
 
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public void print(String message) {
-        PrinterCentralizer.getInstance().print(message);
+        PrinterCentralizer.getInstance().print(this + " print " + message);
     }
 }
