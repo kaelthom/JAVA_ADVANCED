@@ -21,4 +21,5 @@ public class VehicleFactory {
         UNREGISTERED_TRUCK,
         REGISTERED_TRUCK
     }
+
 }
