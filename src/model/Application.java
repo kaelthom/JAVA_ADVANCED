@@ -9,7 +9,18 @@ public class Application {
     private static final String ASTRA = "Astra";
 
     public static void main(String[] args) {
+
+        AbstractObserver citySign = new CitySign("Grenoble");
+        AbstractObserver parkingInfoApi = new ParkingInfoApi("https://whichparking.com");
         Parking<Parkable> newParking = new Parking<>("JJP", "Jean Jaures Public");
+        Parking<Car> newCarParking = new Parking<>("JJC", "Jean Jaures Car");
+        Parking<Truck> newTruckParking = new Parking<>("JJT", "Jean Jaures Truck");
+        newParking.attach(citySign);
+        newParking.attach(parkingInfoApi);
+        newCarParking.attach(citySign);
+        newCarParking.attach(parkingInfoApi);
+        newTruckParking.attach(citySign);
+        newTruckParking.attach(parkingInfoApi);
         newParking.add(new RegisteredCar(PEUGEOT, "AAA"));
         newParking.add(new UnregisteredCar(ASTRA, "BBB"));
         newParking.add(new UnregisteredTruck("Renault", "CCC"));
@@ -17,13 +28,12 @@ public class Application {
         newParking.add(new UnregisteredTruck("Subaru", "FFF"));
         System.out.println(newParking.getVehicles().size() + TOTAL_COST_LABEL + newParking.calculateTotalPrice());
 
-        Parking<Car> newCarParking = new Parking<>("JJC", "Jean Jaures Car");
+
         newCarParking.add(new RegisteredCar(PEUGEOT, "HHH"));
         newCarParking.add(new UnregisteredCar(ASTRA, "GGG"));
         newCarParking.add(new UnregisteredCar(ASTRA, "PPP"));
         System.out.println(newCarParking.getVehicles().size() + TOTAL_COST_LABEL + newCarParking.calculateTotalPrice());
 
-        Parking<Truck> newTruckParking = new Parking<>("JJT", "Jean Jaures Truck");
         newTruckParking.add(new UnregisteredTruck(PEUGEOT, "HHH"));
         newTruckParking.add(new UnregisteredTruck(PEUGEOT, "UUU"));
         System.out.println(newTruckParking.getVehicles().size() + TOTAL_COST_LABEL + newTruckParking.calculateTotalPrice());

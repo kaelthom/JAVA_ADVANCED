@@ -1,5 +1,5 @@
 package model;
 
-public abstract class Observer {
+public abstract class AbstractObserver {
     abstract void update(String message);
 }

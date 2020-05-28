@@ -3,7 +3,7 @@ package model;
 import java.util.*;
 import java.util.stream.IntStream;
 
-public class Parking<T extends Parkable> implements Comparable<Parking> {
+public class Parking<T extends Parkable> extends AbstractSubject implements Comparable<Parking> {
     private final static int capacity = 5;
     private HashSet<T> vehicles;
     private Queue<T> waitingVehicles;
@@ -55,6 +55,7 @@ public class Parking<T extends Parkable> implements Comparable<Parking> {
         }
         System.out.println("Waiting amount : " + waitingVehicles.size());
         System.out.println("Parking contenance : " + (capacity - vehicles.size()));
+        notifyObservers();
     }
 
     public void add(T vehicle) {
@@ -68,6 +69,7 @@ public class Parking<T extends Parkable> implements Comparable<Parking> {
             this.waitingVehicles.add(vehicle);
         }
         System.out.println("Waiting amount : " + waitingVehicles.size());
+        notifyObservers();
     }
 
     public void addAll(Set<T> vehicles) {
@@ -104,6 +106,16 @@ public class Parking<T extends Parkable> implements Comparable<Parking> {
         return "Parking{" +
                 "code='" + code + '\'' +
                 '}';
+    }
+
+    @Override
+    public void notifyObservers() {
+        observers.forEach(
+                observer -> {
+                    System.out.println(this + " notifying " + observer);
+                    observer.update("Remaining free places : " + (capacity - vehicles.size()));
+                }
+        );
     }
 
     public enum Direction {
