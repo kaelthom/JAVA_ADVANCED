@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c7b8925-71c7-4fc3-a833-635e1d20c193" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bank/BankApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bank/BankCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bank/BankCardAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bank/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bank/RegisteredCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bank/TransactionReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/BankApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/BankApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,22 +32,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/VehicleCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#961#962#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/computer/DetailedComputer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,10 +83,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/computer/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/computer/PrinterApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="366">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -164,8 +145,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bank/BankApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bank/TransactionReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding>
+                <element signature="e#92#93#0" expanded="true" />
+                <element signature="e#122#123#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -242,6 +236,9 @@
         <option value="$PROJECT_DIR$/src/bank/RegisteredCard.java" />
         <option value="$PROJECT_DIR$/src/bank/BankCard.java" />
         <option value="$PROJECT_DIR$/src/bank/BankCardAdapter.java" />
+        <option value="$PROJECT_DIR$/src/computer/PrinterApplication.java" />
+        <option value="$PROJECT_DIR$/src/bank/TransctionReader.java" />
+        <option value="$PROJECT_DIR$/src/bank/TransactionReader.java" />
         <option value="$PROJECT_DIR$/src/bank/BankApplication.java" />
       </list>
     </option>
@@ -276,6 +273,12 @@
               <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="computer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
@@ -417,12 +420,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590393440154</updated>
       <workItem from="1590393443647" duration="28743000" />
-      <workItem from="1590493674580" duration="28135000" />
+      <workItem from="1590493674580" duration="29397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56878000" />
+    <option name="totallyTimeSpent" value="58140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -532,7 +535,7 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/computer/Application.java</url>
+          <url>file://$PROJECT_DIR$/src/computer/PrinterApplication.java</url>
           <line>8</line>
           <properties />
           <option name="timeStamp" value="13" />
@@ -892,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/computer/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -942,10 +938,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/computer/PrinterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bank/TransactionReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="e#92#93#0" expanded="true" />
+            <element signature="e#122#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/BankApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

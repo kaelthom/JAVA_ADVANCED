@@ -7,5 +7,9 @@ public class BankApplication {
         Card bankCardAdapter = new BankCardAdapter(new BankCard("02132451"));
         bankCardAdapter.connect();
 
+        TransactionReader transactionReader = new TransactionReader();
+        transactionReader.startTransaction(registeredCard);
+        transactionReader.startTransaction(bankCardAdapter);
+
     }
 }
