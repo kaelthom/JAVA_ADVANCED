@@ -4,19 +4,22 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 public class Parking<T extends Parkable> implements AbstractSubject, Comparable<Parking> {
-    private final static int capacity = 5;
+    public static final int capacity = 5;
     private HashSet<T> vehicles;
     private Queue<T> waitingVehicles;
     private HashSet<TollGate> tollGates;
     private String code;
     private String name;
+    private State state;
 
     public Parking(String code, String name) {
         this.code = code;
         this.name = name;
+        this.state = new OpenState();
         this.vehicles = new HashSet<>();
         this.tollGates = new HashSet<>();
         this.waitingVehicles = new LinkedList<>();
+        this.state = new OpenState();
 
         tollGates.add(new TollGate(Direction.IN, Orientation.NORTH));
         tollGates.add(new TollGate(Direction.OUT, Orientation.SOUTH));
@@ -83,6 +86,16 @@ public class Parking<T extends Parkable> implements AbstractSubject, Comparable<
                 .sum();
     }
 
+    public void openParking() {
+        this.state = new OpenState();
+        System.out.println(state.getMessage(this));
+    }
+
+    public void closeParking() {
+        this.state = new CloseState();
+        System.out.println(state.getMessage(this));
+    }
+
     @Override
     public int compareTo(Parking o) {
         return Integer.compare(this.getVehicles().size(), o.getVehicles().size());
@@ -116,6 +129,10 @@ public class Parking<T extends Parkable> implements AbstractSubject, Comparable<
                     observer.update("Remaining free places : " + (capacity - vehicles.size()));
                 }
         );
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 
     public enum Direction {

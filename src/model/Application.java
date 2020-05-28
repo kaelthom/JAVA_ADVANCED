@@ -105,5 +105,10 @@ public class Application {
             avf2.createUnregisteredVehicle("Titi", "UTRUCK");
         }
 
+        newCarParking.openParking();
+        newCarParking.park(new RegisteredCar("Titi", "NEWCARREGISTERED"));
+        newCarParking.closeParking();
+        newCarParking.openParking();
+
     }
 }
