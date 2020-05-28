@@ -1,6 +1,6 @@
 package computer;
 
-public class Application {
+public class PrinterApplication {
 
     public static final String HELLO = "Hello";
 
