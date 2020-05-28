@@ -1,6 +1,6 @@
 package model;
 
-public class CitySign extends AbstractObserver {
+public class CitySign implements AbstractObserver {
     private static int count;
     private int id;
     private String info;
@@ -21,7 +21,7 @@ public class CitySign extends AbstractObserver {
     }
 
     @Override
-    void update(String message) {
+    public void update(String message) {
         System.out.println(this + "has been notified of " + message);
         this.info = message;
     }

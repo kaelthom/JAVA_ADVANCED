@@ -3,7 +3,7 @@ package model;
 import java.util.*;
 import java.util.stream.IntStream;
 
-public class Parking<T extends Parkable> extends AbstractSubject implements Comparable<Parking> {
+public class Parking<T extends Parkable> implements AbstractSubject, Comparable<Parking> {
     private final static int capacity = 5;
     private HashSet<T> vehicles;
     private Queue<T> waitingVehicles;

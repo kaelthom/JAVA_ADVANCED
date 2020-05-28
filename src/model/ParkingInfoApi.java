@@ -1,6 +1,6 @@
 package model;
 
-public class ParkingInfoApi extends AbstractObserver {
+public class ParkingInfoApi implements AbstractObserver {
     private String url;
 
     public ParkingInfoApi(String url) {
@@ -15,7 +15,7 @@ public class ParkingInfoApi extends AbstractObserver {
     }
 
     @Override
-    void update(String message) {
+    public void update(String message) {
         System.out.println(this + "has been notified of " + message);
     }
 }
