@@ -12,7 +12,7 @@ public class BankApplication {
         transactionReader.startTransaction(bankCardAdapter);
 
         System.out.println("TEsting with reader proxy");
-        CardTransactionReaderProxy transactionReaderProxy = new CardTransactionReaderProxy();
+        CardTransactionReaderProxy transactionReaderProxy = new CardTransactionReaderProxy(new CardTransactionReader());
         transactionReaderProxy.startTransaction(registeredCard);
         transactionReaderProxy.startTransaction(registeredCard);
         transactionReaderProxy.startTransaction(registeredCard);

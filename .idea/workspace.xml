@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c7b8925-71c7-4fc3-a833-635e1d20c193" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bank/CardTransactionReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bank/CardTransactionReaderProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bank/BankApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/BankApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/BankCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/BankCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/BankCardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/BankCardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/RegisteredCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/RegisteredCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/TransactionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/TransactionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bank/CardTransactionReaderProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/CardTransactionReaderProxy.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bank/BankApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="230">
+              <caret line="14" column="118" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
             </state>
           </provider>
         </entry>
@@ -149,11 +142,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bank/CardTransactionReaderProxy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding>
+                <element signature="e#336#337#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,12 +223,12 @@
         <option value="$PROJECT_DIR$/src/bank/TransctionReader.java" />
         <option value="$PROJECT_DIR$/src/bank/CardTransactionReader.java" />
         <option value="$PROJECT_DIR$/src/bank/TransactionReader.java" />
-        <option value="$PROJECT_DIR$/src/bank/BankApplication.java" />
         <option value="$PROJECT_DIR$/src/bank/Card.java" />
         <option value="$PROJECT_DIR$/src/bank/RegisteredCard.java" />
         <option value="$PROJECT_DIR$/src/bank/BankCard.java" />
         <option value="$PROJECT_DIR$/src/bank/BankCardAdapter.java" />
         <option value="$PROJECT_DIR$/src/bank/CardTransactionReaderProxy.java" />
+        <option value="$PROJECT_DIR$/src/bank/BankApplication.java" />
       </list>
     </option>
   </component>
@@ -413,12 +410,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590393440154</updated>
       <workItem from="1590393443647" duration="28743000" />
-      <workItem from="1590493674580" duration="31905000" />
+      <workItem from="1590493674580" duration="32788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60648000" />
+    <option name="totallyTimeSpent" value="61531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -437,10 +434,10 @@
       <window_info anchor="bottom" id="SonarLint" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -902,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bank/BankApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -980,7 +970,18 @@
     <entry file="file://$PROJECT_DIR$/src/bank/CardTransactionReaderProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bank/BankApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="118" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
         </state>
       </provider>
     </entry>
