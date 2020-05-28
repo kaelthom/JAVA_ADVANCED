@@ -11,4 +11,8 @@ public final class RegisteredTruck extends Truck {
     }
 
 
+    @Override
+    public void park() {
+        System.out.println("Registered Truck parked");
+    }
 }

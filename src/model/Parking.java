@@ -42,6 +42,7 @@ public class Parking<T extends Parkable> implements Comparable<Parking> {
     public void park(T vehicle) {
         System.out.println("let's park " + vehicle);
         this.vehicles.add(vehicle);
+        vehicle.park();
     }
 
     public void exit(T vehicle) {

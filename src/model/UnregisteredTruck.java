@@ -15,4 +15,8 @@ public final class UnregisteredTruck extends Truck implements TollGatePayable {
         return 5;
     }
 
+    @Override
+    public void park() {
+        System.out.println("Unregistered Truck parked");
+    }
 }

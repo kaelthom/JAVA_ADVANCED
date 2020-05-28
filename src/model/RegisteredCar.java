@@ -9,4 +9,8 @@ public final class RegisteredCar extends Car {
         return new RegisteredCar(brand, plate);
     }
 
+    @Override
+    public void park() {
+        System.out.println("Registered Car parked");
+    }
 }
