@@ -9,7 +9,7 @@ public class Application {
     private static final String ASTRA = "Astra";
 
     public static void main(String[] args) {
-        Parking<Vehicle> newParking = new Parking<>("JJP", "Jean Jaures Public");
+        Parking<Parkable> newParking = new Parking<>("JJP", "Jean Jaures Public");
         newParking.add(new RegisteredCar(PEUGEOT, "AAA"));
         newParking.add(new UnregisteredCar(ASTRA, "BBB"));
         newParking.add(new UnregisteredTruck("Renault", "CCC"));
@@ -32,26 +32,26 @@ public class Application {
         System.out.println(newCarParking.getGates());
         System.out.println(newTruckParking.getGates());
 
-        List<Parking<? extends Vehicle>> parkings = Arrays.asList(newParking, newCarParking, newTruckParking);
+        List<Parking<? extends Parkable>> parkings = Arrays.asList(newParking, newCarParking, newTruckParking);
         System.out.println("Default order");
-        for (Parking<? extends Vehicle> parking : parkings) {
+        for (Parking<? extends Parkable> parking : parkings) {
             System.out.println(parking.getName());
         }
         System.out.println("Sorting using Collections.sort()");
-        List<Parking<? extends Vehicle>> sortedByDefaultParkings = new ArrayList<>(parkings);
+        List<Parking<? extends Parkable>> sortedByDefaultParkings = new ArrayList<>(parkings);
         Collections.sort(sortedByDefaultParkings);
-        for (Parking<? extends Vehicle> parking : sortedByDefaultParkings) {
+        for (Parking<? extends Parkable> parking : sortedByDefaultParkings) {
             System.out.println(parking.getName() + " - " + parking.getVehicles().size());
         }
         System.out.println("Sorting using Comparator");
-        List<Parking<? extends Vehicle>> sortedByTotalPrice = new ArrayList<>(parkings);
+        List<Parking<? extends Parkable>> sortedByTotalPrice = new ArrayList<>(parkings);
         sortedByTotalPrice.sort(Comparator.comparingInt(Parking::calculateTotalPrice));
-        for (Parking<? extends Vehicle> parking : sortedByTotalPrice) {
+        for (Parking<? extends Parkable> parking : sortedByTotalPrice) {
             System.out.println(parking.getName() + " - " + parking.calculateTotalPrice());
         }
 
         newParking.add(new RegisteredCar(PEUGEOT, "ONE_MORE_THAN_CAPACITY"));
-        Vehicle exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
+        Parkable exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
         newParking.exit(exitVehicle);
         exitVehicle = newParking.getVehicles().stream().findAny().orElse(null);
         newParking.exit(exitVehicle);
@@ -69,7 +69,7 @@ public class Application {
 
         newParking.add(new RegisteredCar(PEUGEOT, "ANOTHER_CAR"));
 
-        Map<String, List<Parking<? extends Vehicle>>> departments = new HashMap<>();
+        Map<String, List<Parking<? extends Parkable>>> departments = new HashMap<>();
         departments.putIfAbsent("Gironde", parkings);
         departments.putIfAbsent("Loire", parkings);
 

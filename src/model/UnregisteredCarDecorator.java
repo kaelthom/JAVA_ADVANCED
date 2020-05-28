@@ -1,7 +1,7 @@
 package model;
 
 public abstract class UnregisteredCarDecorator implements TollGatePayable {
-    public int extraFee;
+    protected int extraFee;
     UnregisteredCar unregisteredCar;
 
     public UnregisteredCarDecorator(UnregisteredCar unregisteredCar) {
